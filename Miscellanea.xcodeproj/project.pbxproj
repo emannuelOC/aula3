@@ -17,6 +17,8 @@
 		C97D24AB1CD4E2DB001C4897 /* MiscellaneaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24AA1CD4E2DB001C4897 /* MiscellaneaUITests.m */; };
 		C97D24BA1CD4F484001C4897 /* AnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24B91CD4F484001C4897 /* AnimationsViewController.m */; };
 		C97D24BD1CD504F9001C4897 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24BC1CD504F9001C4897 /* PhotosViewController.m */; };
+		C97D24C01CD523B4001C4897 /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24BF1CD523B4001C4897 /* DrawingViewController.m */; };
+		C97D24C31CD523BF001C4897 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24C21CD523BF001C4897 /* DrawingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		C97D24B91CD4F484001C4897 /* AnimationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsViewController.m; sourceTree = "<group>"; };
 		C97D24BB1CD504F9001C4897 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
 		C97D24BC1CD504F9001C4897 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
+		C97D24BE1CD523B4001C4897 /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
+		C97D24BF1CD523B4001C4897 /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
+		C97D24C11CD523BF001C4897 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		C97D24C21CD523BF001C4897 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,10 @@
 				C97D24B81CD4F484001C4897 /* AnimationsViewController.h */,
 				C97D24B91CD4F484001C4897 /* AnimationsViewController.m */,
 				C97D248E1CD4E2DB001C4897 /* Main.storyboard */,
+				C97D24BE1CD523B4001C4897 /* DrawingViewController.h */,
+				C97D24BF1CD523B4001C4897 /* DrawingViewController.m */,
+				C97D24C11CD523BF001C4897 /* DrawingView.h */,
+				C97D24C21CD523BF001C4897 /* DrawingView.m */,
 				C97D24BB1CD504F9001C4897 /* PhotosViewController.h */,
 				C97D24BC1CD504F9001C4897 /* PhotosViewController.m */,
 				C97D24911CD4E2DB001C4897 /* Assets.xcassets */,
@@ -285,6 +295,8 @@
 				C97D24871CD4E2DB001C4897 /* main.m in Sources */,
 				C97D24BD1CD504F9001C4897 /* PhotosViewController.m in Sources */,
 				C97D24BA1CD4F484001C4897 /* AnimationsViewController.m in Sources */,
+				C97D24C01CD523B4001C4897 /* DrawingViewController.m in Sources */,
+				C97D24C31CD523BF001C4897 /* DrawingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

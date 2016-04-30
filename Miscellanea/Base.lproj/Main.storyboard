@@ -53,7 +53,7 @@
         <!--Drawing-->
         <scene sceneID="58I-aj-ww7">
             <objects>
-                <viewController id="IXV-bo-oMS" sceneMemberID="viewController">
+                <viewController id="IXV-bo-oMS" customClass="DrawingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cuk-s1-Or7"/>
                         <viewControllerLayoutGuide type="bottom" id="VcV-tR-9LR"/>
@@ -61,9 +61,24 @@
                     <view key="view" contentMode="scaleToFill" id="tn7-RC-OsH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-jK-Vkw" customClass="DrawingView">
+                                <rect key="frame" x="20" y="20" width="560" height="531"/>
+                                <color key="backgroundColor" red="0.93133012820512817" green="0.93133012820512817" blue="0.93133012820512817" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VcV-tR-9LR" firstAttribute="top" secondItem="a1U-jK-Vkw" secondAttribute="bottom" id="Jbh-SF-NXF"/>
+                            <constraint firstItem="a1U-jK-Vkw" firstAttribute="top" secondItem="Cuk-s1-Or7" secondAttribute="bottom" id="ZIr-at-ygV"/>
+                            <constraint firstItem="a1U-jK-Vkw" firstAttribute="leading" secondItem="tn7-RC-OsH" secondAttribute="leadingMargin" id="glS-Z4-EVf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a1U-jK-Vkw" secondAttribute="trailing" id="mDd-XF-3So"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Drawing" image="Edit-30" selectedImage="Edit Filled-30" id="Uf3-Fs-Vqm"/>
+                    <connections>
+                        <outlet property="drawingView" destination="a1U-jK-Vkw" id="aEQ-It-QXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNK-tK-OtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
