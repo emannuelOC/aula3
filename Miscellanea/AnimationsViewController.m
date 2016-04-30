@@ -25,8 +25,9 @@
     //[self animatePositionForView:sender];
     
     // rotação
+    [self animateRotationForView:sender];
     
-    // ...
+    
 }
 
 - (void)animateColorForView:(UIView *)animatingView {
@@ -53,7 +54,11 @@
     }];
 }
 
-
+- (void)animateRotationForView:(UIView *)view {
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionRepeat animations:^{
+        view.transform = CGAffineTransformMakeRotation(1.2 * M_PI);
+    } completion:nil];
+}
 
 
 

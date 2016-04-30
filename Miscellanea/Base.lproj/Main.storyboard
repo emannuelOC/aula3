@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Photos-->
         <scene sceneID="NHP-Hb-26F">
             <objects>
-                <viewController id="mMW-Y6-HgY" sceneMemberID="viewController">
+                <viewController id="mMW-Y6-HgY" customClass="PhotosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8W6-I0-ekc"/>
                         <viewControllerLayoutGuide type="bottom" id="WNu-0m-qVe"/>
@@ -16,9 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="wBR-92-BWS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-cT-YJL">
+                                <rect key="frame" x="262" y="513" width="76" height="30"/>
+                                <state key="normal" title="Mudar foto"/>
+                                <connections>
+                                    <action selector="changePicture" destination="mMW-Y6-HgY" eventType="touchUpInside" id="cUJ-o0-Ycq"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BMG-35-WvI">
+                                <rect key="frame" x="20" y="20" width="560" height="485"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BMG-35-WvI" firstAttribute="top" secondItem="8W6-I0-ekc" secondAttribute="bottom" id="9Mc-q1-IFt"/>
+                            <constraint firstItem="WNu-0m-qVe" firstAttribute="top" secondItem="tuY-cT-YJL" secondAttribute="bottom" constant="8" id="BLv-ET-JYN"/>
+                            <constraint firstItem="BMG-35-WvI" firstAttribute="leading" secondItem="wBR-92-BWS" secondAttribute="leadingMargin" id="Xe5-4r-cvH"/>
+                            <constraint firstItem="BMG-35-WvI" firstAttribute="trailing" secondItem="wBR-92-BWS" secondAttribute="trailingMargin" id="eau-Rx-PGk"/>
+                            <constraint firstItem="tuY-cT-YJL" firstAttribute="top" secondItem="BMG-35-WvI" secondAttribute="bottom" constant="8" id="o9f-o8-aXa"/>
+                            <constraint firstItem="tuY-cT-YJL" firstAttribute="centerX" secondItem="wBR-92-BWS" secondAttribute="centerX" id="sgn-1Z-vd5"/>
+                            <constraint firstItem="BMG-35-WvI" firstAttribute="top" secondItem="8W6-I0-ekc" secondAttribute="bottom" id="v7t-YD-sdK"/>
+                            <constraint firstItem="BMG-35-WvI" firstAttribute="centerX" secondItem="wBR-92-BWS" secondAttribute="centerX" id="vt0-xS-ied"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photos" image="Stack of Photos-30" selectedImage="Stack of Photos Filled-30" id="e6l-mG-5C5"/>
+                    <connections>
+                        <outlet property="pictureImageView" destination="BMG-35-WvI" id="gpW-v6-SXb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezW-IM-RDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
