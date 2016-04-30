@@ -151,7 +151,7 @@
         <!--Recording-->
         <scene sceneID="QM5-6W-L8N">
             <objects>
-                <viewController id="nyY-fm-hue" sceneMemberID="viewController">
+                <viewController id="nyY-fm-hue" customClass="RecordingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lY9-Rp-rcm"/>
                         <viewControllerLayoutGuide type="bottom" id="g1I-6F-1pd"/>
@@ -163,14 +163,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-fr-4jV">
                                 <rect key="frame" x="277" y="285" width="46" height="30"/>
                                 <state key="normal" title="Gravar"/>
+                                <connections>
+                                    <action selector="record:" destination="nyY-fm-hue" eventType="touchUpInside" id="oBj-9Y-YzR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VR-EU-upa">
                                 <rect key="frame" x="263" y="362" width="75" height="30"/>
                                 <state key="normal" title="Reproduzir"/>
+                                <connections>
+                                    <action selector="play:" destination="nyY-fm-hue" eventType="touchUpInside" id="gU7-nW-g2G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcf-eQ-dup">
                                 <rect key="frame" x="282" y="324" width="37" height="30"/>
                                 <state key="normal" title="Parar"/>
+                                <connections>
+                                    <action selector="stop:" destination="nyY-fm-hue" eventType="touchUpInside" id="s7X-Yc-ksU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiX-fo-PFe">
                                 <rect key="frame" x="273" y="59" width="54" height="21"/>
@@ -192,6 +201,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recording" image="Microphone-30" selectedImage="Microphone Filled-30" id="q1c-mA-Bpm"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="wiX-fo-PFe" id="LEh-Am-TDo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BB-8W-x5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
