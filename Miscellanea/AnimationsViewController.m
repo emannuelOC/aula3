@@ -19,9 +19,10 @@
     //[self animateColorForView:sender];
     
     // tamanho
-    [self animateSizeForView:sender];
+    //[self animateSizeForView:sender];
     
     // posição
+    //[self animatePositionForView:sender];
     
     // rotação
     
@@ -43,6 +44,12 @@
 - (void)animateSizeForView:(UIView *)view {
     [UIView animateWithDuration:0.5 animations:^{
         view.transform = CGAffineTransformScale(view.transform, 1.3, 1.3);
+    }];
+}
+
+- (void)animatePositionForView:(UIView *)view {
+    [UIView animateWithDuration:0.5 animations:^{
+        view.transform = CGAffineTransformTranslate(view.transform, 30, 30);
     }];
 }
 
