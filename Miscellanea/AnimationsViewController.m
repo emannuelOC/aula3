@@ -16,9 +16,10 @@
 
 - (IBAction)animate:(UIButton *)sender {
     // cor
-    [self animateColorForView:sender];
+    //[self animateColorForView:sender];
     
     // tamanho
+    [self animateSizeForView:sender];
     
     // posição
     
@@ -38,6 +39,15 @@
         animatingView.backgroundColor = newColor;
     }];
 }
+
+- (void)animateSizeForView:(UIView *)view {
+    [UIView animateWithDuration:0.5 animations:^{
+        view.transform = CGAffineTransformScale(view.transform, 1.3, 1.3);
+    }];
+}
+
+
+
 
 
 @end
