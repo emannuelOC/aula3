@@ -19,6 +19,8 @@
 		C97D24BD1CD504F9001C4897 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24BC1CD504F9001C4897 /* PhotosViewController.m */; };
 		C97D24C01CD523B4001C4897 /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24BF1CD523B4001C4897 /* DrawingViewController.m */; };
 		C97D24C31CD523BF001C4897 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24C21CD523BF001C4897 /* DrawingView.m */; };
+		C97D24C61CD53B4F001C4897 /* RecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24C51CD53B4F001C4897 /* RecordingViewController.m */; };
+		C97D24C81CD53BE5001C4897 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97D24C71CD53BE5001C4897 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		C97D24BF1CD523B4001C4897 /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
 		C97D24C11CD523BF001C4897 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
 		C97D24C21CD523BF001C4897 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		C97D24C41CD53B4F001C4897 /* RecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingViewController.h; sourceTree = "<group>"; };
+		C97D24C51CD53B4F001C4897 /* RecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingViewController.m; sourceTree = "<group>"; };
+		C97D24C71CD53BE5001C4897 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97D24C81CD53BE5001C4897 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,7 @@
 		C97D24791CD4E2DB001C4897 = {
 			isa = PBXGroup;
 			children = (
+				C97D24C71CD53BE5001C4897 /* AVFoundation.framework */,
 				C97D24841CD4E2DB001C4897 /* Miscellanea */,
 				C97D249E1CD4E2DB001C4897 /* MiscellaneaTests */,
 				C97D24A91CD4E2DB001C4897 /* MiscellaneaUITests */,
@@ -120,6 +127,8 @@
 				C97D24B81CD4F484001C4897 /* AnimationsViewController.h */,
 				C97D24B91CD4F484001C4897 /* AnimationsViewController.m */,
 				C97D248E1CD4E2DB001C4897 /* Main.storyboard */,
+				C97D24C41CD53B4F001C4897 /* RecordingViewController.h */,
+				C97D24C51CD53B4F001C4897 /* RecordingViewController.m */,
 				C97D24BE1CD523B4001C4897 /* DrawingViewController.h */,
 				C97D24BF1CD523B4001C4897 /* DrawingViewController.m */,
 				C97D24C11CD523BF001C4897 /* DrawingView.h */,
@@ -290,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97D24C61CD53B4F001C4897 /* RecordingViewController.m in Sources */,
 				C97D248D1CD4E2DB001C4897 /* ViewController.m in Sources */,
 				C97D248A1CD4E2DB001C4897 /* AppDelegate.m in Sources */,
 				C97D24871CD4E2DB001C4897 /* main.m in Sources */,

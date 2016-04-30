@@ -159,7 +159,37 @@
                     <view key="view" contentMode="scaleToFill" id="h5G-2b-vie">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-fr-4jV">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Gravar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VR-EU-upa">
+                                <rect key="frame" x="263" y="362" width="75" height="30"/>
+                                <state key="normal" title="Reproduzir"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcf-eQ-dup">
+                                <rect key="frame" x="282" y="324" width="37" height="30"/>
+                                <state key="normal" title="Parar"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiX-fo-PFe">
+                                <rect key="frame" x="273" y="59" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ib2-fr-4jV" firstAttribute="centerY" secondItem="h5G-2b-vie" secondAttribute="centerY" id="8mY-ug-xj8"/>
+                            <constraint firstItem="rcf-eQ-dup" firstAttribute="top" secondItem="Ib2-fr-4jV" secondAttribute="bottom" constant="9" id="Ctu-gG-h1a"/>
+                            <constraint firstItem="wiX-fo-PFe" firstAttribute="top" secondItem="lY9-Rp-rcm" secondAttribute="bottom" constant="39" id="FLa-Qc-kVx"/>
+                            <constraint firstItem="rcf-eQ-dup" firstAttribute="centerX" secondItem="Ib2-fr-4jV" secondAttribute="centerX" id="IfH-mn-5Io"/>
+                            <constraint firstItem="Ib2-fr-4jV" firstAttribute="centerX" secondItem="h5G-2b-vie" secondAttribute="centerX" id="Kle-1F-pVr"/>
+                            <constraint firstItem="0VR-EU-upa" firstAttribute="top" secondItem="rcf-eQ-dup" secondAttribute="bottom" constant="8" id="ToU-PG-npr"/>
+                            <constraint firstItem="0VR-EU-upa" firstAttribute="centerX" secondItem="rcf-eQ-dup" secondAttribute="centerX" id="hmn-C2-xRA"/>
+                            <constraint firstItem="wiX-fo-PFe" firstAttribute="centerX" secondItem="h5G-2b-vie" secondAttribute="centerX" id="tfU-5q-wa1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recording" image="Microphone-30" selectedImage="Microphone Filled-30" id="q1c-mA-Bpm"/>
                 </viewController>

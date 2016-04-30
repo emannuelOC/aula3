@@ -13,26 +13,32 @@ IB_DESIGNABLE
 
 
 - (void)drawRect:(CGRect)rect {
-    // create path
-    UIBezierPath *path = [[UIBezierPath alloc] init];
-    UIBezierPath *bluePath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(250, 250, 100, 100)];
-    [bluePath setLineWidth:2];
     
-    // add lines, arcs, curves, etc.
-    [path moveToPoint:CGPointMake(30, 30)];
-    [path addLineToPoint:CGPointMake(130, 130)];
+    CGRect faceRect = CGRectMake(30, 30, 250, 170);
+    UIBezierPath *face = [UIBezierPath bezierPathWithRect:faceRect];
+    UIBezierPath *eyes = [[UIBezierPath alloc] init];
+    [eyes moveToPoint:CGPointMake(80, 80)];
+    [eyes addLineToPoint:CGPointMake(130, 80)];
+    [eyes moveToPoint:CGPointMake(170, 80)];
+    [eyes addLineToPoint:CGPointMake(220, 80)];
+    UIBezierPath *mouth = [[UIBezierPath alloc] init];
+    [mouth moveToPoint:CGPointMake(80, 150)];
+    [mouth addLineToPoint:CGPointMake(220, 150)];
+    [mouth addLineToPoint:CGPointMake(220, 135)];
+
+    [[UIColor colorWithRed:0.9 green:0.8 blue:0.7 alpha:1] setFill];
     
-    // configure colors
-    [[UIColor redColor] setStroke];
-    // stroke / fill path
-    [path stroke];
+    UIBezierPath *curve = [[UIBezierPath alloc] init];
     
-    [[UIColor blueColor] setStroke];
-    [[UIColor lightGrayColor] setFill];
-    [bluePath stroke];
-    [bluePath fill];
+    [curve addArcWithCenter:CGPointMake(150, 250) radius:100 startAngle:0.7 endAngle:0.9 * M_PI clockwise:YES];
     
     
+    [face fill];
+    [face stroke];
+    [eyes stroke];
+    [mouth stroke];
+    
+    [curve stroke];
 }
 
 @end
