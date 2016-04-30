@@ -7,7 +7,6 @@
 //
 
 #import "RecordingViewController.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface RecordingViewController ()
 @property (weak, nonatomic) IBOutlet UILabel  *statusLabel;
@@ -29,11 +28,15 @@
     }
     
     if ([_recorder prepareToRecord]) {
+        _statusLabel.text = @"Gravando...";
+        _statusLabel.textColor = [UIColor redColor];
         [_recorder record];
     }
 }
 
 - (IBAction)stop:(UIButton *)sender {
+    _statusLabel.textColor = [UIColor blackColor];
+    _statusLabel.text = @"Parado.";
     [_recorder stop];
 }
 
@@ -41,15 +44,27 @@
     NSURL *url = [self getURL];
     NSError *error;
     _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    _player.delegate = self;
     
     if (error) {
         return;
     }
     
     if ([_player prepareToPlay]) {
+        _statusLabel.textColor = [UIColor blackColor];
+        _statusLabel.text = @"Reproduzindo...";
         [_player play];
     }
 }
+
+#pragma mark - AVAudioPlayer delegate
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    _statusLabel.textColor = [UIColor blackColor];
+    _statusLabel.text = @"Parado.";
+}
+
+#pragma mark - Utility methods
 
 - (NSDictionary *)settingsForAudio {
     NSMutableDictionary *settings = [NSMutableDictionary dictionary];
