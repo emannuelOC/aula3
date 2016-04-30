@@ -15,6 +15,7 @@
 		C97D24951CD4E2DB001C4897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97D24931CD4E2DB001C4897 /* LaunchScreen.storyboard */; };
 		C97D24A01CD4E2DB001C4897 /* MiscellaneaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D249F1CD4E2DB001C4897 /* MiscellaneaTests.m */; };
 		C97D24AB1CD4E2DB001C4897 /* MiscellaneaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24AA1CD4E2DB001C4897 /* MiscellaneaUITests.m */; };
+		C97D24BA1CD4F484001C4897 /* AnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97D24B91CD4F484001C4897 /* AnimationsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		C97D24A61CD4E2DB001C4897 /* MiscellaneaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiscellaneaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97D24AA1CD4E2DB001C4897 /* MiscellaneaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiscellaneaUITests.m; sourceTree = "<group>"; };
 		C97D24AC1CD4E2DB001C4897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97D24B81CD4F484001C4897 /* AnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationsViewController.h; sourceTree = "<group>"; };
+		C97D24B91CD4F484001C4897 /* AnimationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				C97D24891CD4E2DB001C4897 /* AppDelegate.m */,
 				C97D248B1CD4E2DB001C4897 /* ViewController.h */,
 				C97D248C1CD4E2DB001C4897 /* ViewController.m */,
+				C97D24B81CD4F484001C4897 /* AnimationsViewController.h */,
+				C97D24B91CD4F484001C4897 /* AnimationsViewController.m */,
 				C97D248E1CD4E2DB001C4897 /* Main.storyboard */,
 				C97D24911CD4E2DB001C4897 /* Assets.xcassets */,
 				C97D24931CD4E2DB001C4897 /* LaunchScreen.storyboard */,
@@ -273,6 +278,7 @@
 				C97D248D1CD4E2DB001C4897 /* ViewController.m in Sources */,
 				C97D248A1CD4E2DB001C4897 /* AppDelegate.m in Sources */,
 				C97D24871CD4E2DB001C4897 /* main.m in Sources */,
+				C97D24BA1CD4F484001C4897 /* AnimationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

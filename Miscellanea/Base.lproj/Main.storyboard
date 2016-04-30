@@ -1,25 +1,159 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ps9-AR-M2P">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Photos-->
+        <scene sceneID="NHP-Hb-26F">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="mMW-Y6-HgY" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="8W6-I0-ekc"/>
+                        <viewControllerLayoutGuide type="bottom" id="WNu-0m-qVe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="wBR-92-BWS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Photos" image="Stack of Photos-30" selectedImage="Stack of Photos Filled-30" id="e6l-mG-5C5"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezW-IM-RDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="246" y="114"/>
+        </scene>
+        <!--Drawing-->
+        <scene sceneID="58I-aj-ww7">
+            <objects>
+                <viewController id="IXV-bo-oMS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cuk-s1-Or7"/>
+                        <viewControllerLayoutGuide type="bottom" id="VcV-tR-9LR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tn7-RC-OsH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Drawing" image="Edit-30" selectedImage="Edit Filled-30" id="Uf3-Fs-Vqm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNK-tK-OtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="818"/>
+        </scene>
+        <!--Animations View Controller-->
+        <scene sceneID="pgg-de-mci">
+            <objects>
+                <viewController id="z2T-5L-mVe" customClass="AnimationsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0CQ-eZ-fHM"/>
+                        <viewControllerLayoutGuide type="bottom" id="XPe-hL-A9O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yco-tu-vEN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-UZ-jTr">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="PcJ-RD-u7W"/>
+                                    <constraint firstAttribute="height" constant="100" id="kop-ue-Wl0"/>
+                                </constraints>
+                                <state key="normal" title="PRESS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="animate:" destination="z2T-5L-mVe" eventType="touchUpInside" id="CAS-wy-mAk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3U1-UZ-jTr" firstAttribute="centerX" secondItem="yco-tu-vEN" secondAttribute="centerX" id="exa-4P-E2P"/>
+                            <constraint firstItem="3U1-UZ-jTr" firstAttribute="centerY" secondItem="yco-tu-vEN" secondAttribute="centerY" id="gpG-K5-Eab"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ihL-LZ-pg0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xoA-fS-xho" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="-577"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="L8q-z3-xsl">
+            <objects>
+                <tabBarController id="ps9-AR-M2P" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="g9J-2J-o41">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VEV-O1-Li6" kind="relationship" relationship="viewControllers" id="9re-HA-FVW"/>
+                        <segue destination="mMW-Y6-HgY" kind="relationship" relationship="viewControllers" id="iXv-Gv-l4Y"/>
+                        <segue destination="IXV-bo-oMS" kind="relationship" relationship="viewControllers" id="lpU-fS-Vh2"/>
+                        <segue destination="nyY-fm-hue" kind="relationship" relationship="viewControllers" id="77z-hE-v4I"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dI8-UK-NP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-782" y="326"/>
+        </scene>
+        <!--Recording-->
+        <scene sceneID="QM5-6W-L8N">
+            <objects>
+                <viewController id="nyY-fm-hue" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lY9-Rp-rcm"/>
+                        <viewControllerLayoutGuide type="bottom" id="g1I-6F-1pd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5G-2b-vie">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recording" image="Microphone-30" selectedImage="Microphone Filled-30" id="q1c-mA-Bpm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1BB-8W-x5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="1602"/>
+        </scene>
+        <!--Animations-->
+        <scene sceneID="aBW-XI-kIg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VEV-O1-Li6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Animations" image="Grasshopper-30" selectedImage="Grasshopper Filled-30" id="Vlf-aN-Kqj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sTo-Wh-R9H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="z2T-5L-mVe" kind="relationship" relationship="rootViewController" id="5Yz-3N-jPm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRK-01-RWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="-577"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Edit Filled-30" width="30" height="30"/>
+        <image name="Edit-30" width="30" height="30"/>
+        <image name="Grasshopper Filled-30" width="30" height="30"/>
+        <image name="Grasshopper-30" width="30" height="30"/>
+        <image name="Microphone Filled-30" width="30" height="30"/>
+        <image name="Microphone-30" width="30" height="30"/>
+        <image name="Stack of Photos Filled-30" width="30" height="30"/>
+        <image name="Stack of Photos-30" width="30" height="30"/>
+    </resources>
 </document>
