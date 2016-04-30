@@ -10,22 +10,45 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface RecordingViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel  *statusLabel;
+@property (strong, nonatomic) AVAudioRecorder *recorder;
+@property (strong, nonatomic) AVAudioPlayer   *player;
 @end
 
 @implementation RecordingViewController
 
 - (IBAction)record:(UIButton *)sender {
+    NSURL *url = [self getURL];
+    NSDictionary *settings = [self settingsForAudio];
+    NSError *error;
     
+    _recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
+    
+    if (error) {
+        return;
+    }
+    
+    if ([_recorder prepareToRecord]) {
+        [_recorder record];
+    }
 }
 
 - (IBAction)stop:(UIButton *)sender {
-    
+    [_recorder stop];
 }
 
 - (IBAction)play:(UIButton *)sender {
+    NSURL *url = [self getURL];
+    NSError *error;
+    _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     
+    if (error) {
+        return;
+    }
+    
+    if ([_player prepareToPlay]) {
+        [_player play];
+    }
 }
 
 - (NSDictionary *)settingsForAudio {
